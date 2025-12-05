@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://w7vkye3wdpe7"]
+[gd_scene load_steps=4 format=3 uid="uid://w7vkye3wdpe7"]
 
 [ext_resource type="Script" uid="uid://b0kqdmh3d8m1y" path="res://MainScene.cs" id="1_0f027"]
+[ext_resource type="PackedScene" uid="uid://cns8h2y87gab6" path="res://note_label.tscn" id="2_2c62f"]
+[ext_resource type="Script" uid="uid://0gaiukbpl4ax" path="res://ScoreLabel.cs" id="3_gyfs4"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_0f027")
+NoteLabelScene = ExtResource("2_2c62f")
+ScoreLabelPath = NodePath("ScoreLabel")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 18.0
+offset_top = 604.0
+offset_right = 189.0
+offset_bottom = 632.0
+text = "Score: 0"
+script = ExtResource("3_gyfs4")
