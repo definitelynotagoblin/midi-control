@@ -26,10 +26,12 @@ public partial class MainScene : Node2D
 	
 	private static void HandleMidi(InputEventMidi midiEvent)
 	{
+		var note = MidiUtils.GetNoteName(midiEvent.Pitch);
+
 		// GD.Print(midiEvent);
 		// GD.Print($"Channel {midiEvent.Channel}");
 		GD.Print($"Message {midiEvent.Message}");
-		GD.Print($"Pitch {midiEvent.Pitch}");
+		GD.Print($"Pitch {midiEvent.Pitch} -> {note}");
 		GD.Print($"Velocity {midiEvent.Velocity}");
 		// GD.Print($"Instrument {midiEvent.Instrument}");
 		// GD.Print($"Pressure {midiEvent.Pressure}");
