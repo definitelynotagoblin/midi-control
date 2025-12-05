@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cns8h2y87gab6"]
+[gd_scene load_steps=3 format=3 uid="uid://cns8h2y87gab6"]
 
 [ext_resource type="Script" uid="uid://c8x8kci3ov7gp" path="res://NoteLabel.cs" id="1_xtjj4"]
 
-[node name="NoteLabel" type="RichTextLabel"]
+[sub_resource type="LabelSettings" id="LabelSettings_xtjj4"]
+font_size = 64
+font_color = Color(5.7756904e-07, 0.6736195, 0.657273, 1)
+
+[node name="NoteLabel" type="Label"]
 offset_right = 40.0
 offset_bottom = 40.0
+label_settings = SubResource("LabelSettings_xtjj4")
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("1_xtjj4")

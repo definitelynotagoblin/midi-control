@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class NoteLabel : RichTextLabel
+public partial class NoteLabel : Label
 {
 	[Export] public int TargetPitch;      // MIDI note to match
 	[Export] public float Speed = 100f;   // Pixels per second
